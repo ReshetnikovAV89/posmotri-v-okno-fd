@@ -58,22 +58,24 @@ video {
   gap: 30px;
   margin: 0 30px;
   inline-size: 100%;
+  height: 525px;
 }
 
 .result {
   align-self: flex-end;
+  margin-bottom: 32px;
 }
 
 .result__video-container {
   position: relative;
   inline-size: 711px;
-  margin: 0 0 11px;
 }
 
 .search-form {
   display: flex;
   align-items: center;
   gap: 40px;
+  margin-bottom: -36px;
 }
 
 .result__video {
@@ -81,6 +83,7 @@ video {
   block-size: 100%;
   object-fit: cover;
   object-position: center;
+  max-height: 399px;
 }
 
 .search-form__fieldset {
@@ -115,7 +118,8 @@ video {
 
 .search-form__textfield {
   border-top: 1px solid #fff;
-  border-right: none;
+  border-left: 1px;
+  border-right: 1px;
   border-bottom: 1px solid #fff;
   border-left: none;
   padding: 2px 0;
@@ -125,6 +129,7 @@ video {
   font-size: inherit;
   background-color: transparent;
   inline-size: 225px;
+  appearance: none;
 }
 
 .search-form__textfield::placeholder {
@@ -136,6 +141,7 @@ video {
 
 .search-form__textfield:active {
   outline: 1px solid #fff;
+  text-decoration: none;
 }
 
 .search-form__textfield:focus {
@@ -178,27 +184,34 @@ video {
   background-color: transparent;
   cursor: pointer;
   inline-size: 100%;
+  appearance: none;
 }
 
 .button:active {
   background-color: #545050;
+  position: relative;
+  text-decoration: none;
 }
 
 .button:hover {
   text-decoration: underline 1px #fff;
+  position: relative;
 }
 
 .button:focus {
   outline: none;
+  position: relative;
 }
 
 .button:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 1px;
+  position: relative;
 }
 
 .search-form__submit-button {
   align-self: flex-end;
+  position: relative;
 }
 
 .content__details {
@@ -210,8 +223,10 @@ video {
   font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 75px;
-  line-height: 70.5px;
+  line-height: 94%;
+
   text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .content__accent {
@@ -220,9 +235,13 @@ video {
 
 .content__list {
   position: relative;
+  block-size: 252px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
   overflow-y: scroll;
-  block-size: 298px;
-  scrollbar-width: none;
+  scrollbar-width: thin;
+  scrollbar-color: #fff #1b1919;
 }
 
 .content__list::-webkit-scrollbar {
@@ -230,38 +249,48 @@ video {
 }
 
 .content__list-item:not(:last-child) {
-  margin: 0 0 34px;
+  position: relative;
+  flex-shrink: 3;
+  margin-bottom: 20px;
 }
 
 .content__card-link {
   display: block;
   margin: 2px;
   text-decoration: none;
+  position: relative;
 }
 
 .content__card-link:active {
   background-color: #545050;
+  position: relative;
+  text-decoration: none;
 }
 
 .content__card-link:hover {
   text-decoration: underline 1px #fff;
+  position: relative;
 }
 
 .content__card-link:focus {
   outline: none;
+  position: relative;
 }
 
 .content__card-link:focus-visible {
   outline: 1px solid #fff;
+  position: relative;
 }
 
 .content__card-link_current {
   background-color: #545050;
+  position: relative;
 }
 
 .content__video-card {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 .content__video-card-title {
@@ -273,6 +302,9 @@ video {
   line-height: 1;
   text-transform: uppercase;
   hyphens: auto;
+  position: relative;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .content__video-card-description {
@@ -280,6 +312,7 @@ video {
   color: #fff;
   font-weight: 400;
   line-height: 16.2px;
+  position: relative;
 }
 
 .content__video-card-thumbnail {
@@ -287,4 +320,5 @@ video {
   block-size: 103px;
   object-fit: cover;
   object-position: center;
+  position: relative;
 }
