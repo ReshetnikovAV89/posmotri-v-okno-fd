@@ -58,12 +58,14 @@ video {
   gap: 30px;
   margin: 0 30px;
   inline-size: 100%;
-  height: 525px;
+  width: 1140px;
+  height: 534px;
 }
 
 .result {
   align-self: flex-end;
-  margin-bottom: 32px;
+  width: 711px;
+  height: 456px;
 }
 
 .result__video-container {
@@ -75,7 +77,7 @@ video {
   display: flex;
   align-items: center;
   gap: 40px;
-  margin-bottom: -36px;
+  margin-top: 10px;
 }
 
 .result__video {
@@ -83,7 +85,7 @@ video {
   block-size: 100%;
   object-fit: cover;
   object-position: center;
-  max-height: 399px;
+  max-height: 386px;
 }
 
 .search-form__fieldset {
@@ -224,7 +226,6 @@ video {
   font-weight: 700;
   font-size: 75px;
   line-height: 94%;
-
   text-transform: uppercase;
   margin-bottom: 20px;
 }
@@ -235,28 +236,25 @@ video {
 
 .content__list {
   position: relative;
-  block-size: 252px;
-  margin-bottom: 10px;
+  width: 390px;
+  height: 534px;
+  max-height: 257px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
   overflow-y: scroll;
+  overflow-x: hidden;
   scrollbar-width: thin;
-  scrollbar-color: #fff #1b1919;
-}
-
-.content__list::-webkit-scrollbar {
-  display: none;
+  scrollbar-color: #545050 #1b1919;
 }
 
 .content__list-item:not(:last-child) {
   position: relative;
-  flex-shrink: 3;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .content__card-link {
   display: block;
-  margin: 2px;
   text-decoration: none;
   position: relative;
 }
@@ -285,12 +283,15 @@ video {
 .content__card-link_current {
   background-color: #545050;
   position: relative;
+  max-height: 100px;
+  margin-bottom: 25px;
 }
 
 .content__video-card {
   display: flex;
   justify-content: space-between;
   position: relative;
+  margin-bottom: 18px;
 }
 
 .content__video-card-title {
@@ -305,6 +306,8 @@ video {
   position: relative;
   text-overflow: ellipsis;
   white-space: nowrap;
+  max-width: 196px;
+  overflow: hidden;
 }
 
 .content__video-card-description {
@@ -316,9 +319,10 @@ video {
 }
 
 .content__video-card-thumbnail {
-  inline-size: 194px;
-  block-size: 103px;
+  width: 190px;
+  height: 103px;
   object-fit: cover;
   object-position: center;
   position: relative;
+  flex-shrink: 0;
 }
