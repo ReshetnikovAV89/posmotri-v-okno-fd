@@ -69,15 +69,16 @@ video {
 }
 
 .result__video-container {
-  position: relative;
   inline-size: 711px;
+  height: 388px;
+  position: relative;
+  margin-bottom: 15px;
 }
 
 .search-form {
   display: flex;
   align-items: center;
   gap: 40px;
-  margin-top: 10px;
 }
 
 .result__video {
@@ -85,7 +86,6 @@ video {
   block-size: 100%;
   object-fit: cover;
   object-position: center;
-  max-height: 386px;
 }
 
 .search-form__fieldset {
@@ -191,29 +191,24 @@ video {
 
 .button:active {
   background-color: #545050;
-  position: relative;
   text-decoration: none;
 }
 
 .button:hover {
   text-decoration: underline 1px #fff;
-  position: relative;
 }
 
 .button:focus {
   outline: none;
-  position: relative;
 }
 
 .button:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 1px;
-  position: relative;
 }
 
 .search-form__submit-button {
   align-self: flex-end;
-  position: relative;
 }
 
 .content__details {
@@ -227,7 +222,7 @@ video {
   font-size: 75px;
   line-height: 94%;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .content__accent {
@@ -235,63 +230,65 @@ video {
 }
 
 .content__list {
-  position: relative;
   width: 390px;
-  height: 534px;
-  max-height: 257px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  scrollbar-width: thin;
-  scrollbar-color: #545050 #1b1919;
+  margin-bottom: 30px;
 }
 
 .content__list-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.content__list-container {
   position: relative;
-  margin-bottom: 10px;
+  block-size: 298px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  inline-size: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgb(217 217 217 / 10%);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #d9d9d9;
 }
 
 .content__card-link {
   display: block;
   text-decoration: none;
-  position: relative;
+  position: relative; /*?*/
 }
 
 .content__card-link:active {
   background-color: #545050;
-  position: relative;
   text-decoration: none;
 }
 
 .content__card-link:hover {
   text-decoration: underline 1px #fff;
-  position: relative;
 }
 
 .content__card-link:focus {
   outline: none;
-  position: relative;
 }
 
 .content__card-link:focus-visible {
   outline: 1px solid #fff;
-  position: relative;
 }
 
 .content__card-link_current {
   background-color: #545050;
-  position: relative;
-  max-height: 100px;
-  margin-bottom: 25px;
 }
 
 .content__video-card {
   display: flex;
   justify-content: space-between;
-  position: relative;
-  margin-bottom: 18px;
 }
 
 .content__video-card-title {
@@ -303,11 +300,10 @@ video {
   line-height: 1;
   text-transform: uppercase;
   hyphens: auto;
-  position: relative;
+  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  max-width: 196px;
-  overflow: hidden;
+  max-width: 195px;
 }
 
 .content__video-card-description {
@@ -315,7 +311,6 @@ video {
   color: #fff;
   font-weight: 400;
   line-height: 16.2px;
-  position: relative;
 }
 
 .content__video-card-thumbnail {
@@ -323,6 +318,5 @@ video {
   height: 103px;
   object-fit: cover;
   object-position: center;
-  position: relative;
   flex-shrink: 0;
 }
